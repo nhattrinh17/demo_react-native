@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import {Text, TouchableOpacity} from 'react-native';
-import styles from './style';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import PropTypes from "prop-types";
+import React from "react";
+import { Text, TouchableOpacity } from "react-native";
+import styles from "./style";
+import Icon from "react-native-vector-icons/FontAwesome5";
 
 function UiButton(props: any): JSX.Element {
   const {
@@ -15,6 +15,9 @@ function UiButton(props: any): JSX.Element {
     backgroundColor,
     handlePerss,
     textColor,
+    iconColor,
+    paddingHorizontal,
+    paddingVertical,
   } = props;
 
   return (
@@ -22,26 +25,33 @@ function UiButton(props: any): JSX.Element {
       style={[
         styles.button,
         {
-          width: width,
+          width: width || "auto",
+          paddingHorizontal: paddingHorizontal || 8,
+          paddingVertical: paddingVertical || 12,
           height: height,
           backgroundColor: backgroundColor || styles.button.backgroundColor,
           borderColor: borderColor || styles.button.borderColor,
           borderRadius: borderRadius || styles.button.borderRadius,
         },
       ]}
-      onPress={handlePerss}>
+      onPress={handlePerss}
+    >
       {iconName && (
         <Icon
           name={iconName}
           size={20}
-          style={[styles.iconButton, {color: styles.iconButton.color}]}
+          style={[
+            styles.iconButton,
+            { color: iconColor || styles.iconButton.color },
+          ]}
         />
       )}
       <Text
         style={[
           styles.textButton,
-          {color: textColor || styles.textButton.color},
-        ]}>
+          { color: textColor || styles.textButton.color },
+        ]}
+      >
         {content}
       </Text>
     </TouchableOpacity>
@@ -51,7 +61,7 @@ function UiButton(props: any): JSX.Element {
 UiButton.propTypes = {
   content: PropTypes.string.isRequired,
   iconName: PropTypes.string,
-  width: PropTypes.number,
+  width: PropTypes.any,
   height: PropTypes.number,
   borderRadius: PropTypes.number,
   borderColor: PropTypes.string,
@@ -59,6 +69,8 @@ UiButton.propTypes = {
   handlePerss: PropTypes.func,
   textColor: PropTypes.string,
   iconColor: PropTypes.string,
+  paddingVertical: PropTypes.number,
+  paddingHorizontal: PropTypes.number,
 };
 
 export default UiButton;

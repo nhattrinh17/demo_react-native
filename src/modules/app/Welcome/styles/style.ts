@@ -1,9 +1,9 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
     flex: 100,
-    width: '100%',
+    width: "100%",
     height: 200,
   },
   image: {
@@ -14,23 +14,24 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    flexDirection: 'row',
+    flexDirection: "row",
     height: 50,
-    alignItems: 'center',
+    alignItems: "center",
     paddingStart: 10,
     paddingEnd: 10,
     flex: 10,
   },
   text: {
-    color: 'white',
-    fontWeight: '500',
-    textTransform: 'uppercase',
+    color: "white",
+    fontWeight: "500",
+    textTransform: "uppercase",
   },
   iconFire: {
     marginHorizontal: 10,
   },
   iconQuestion: {
-    tintColor: 'white',
+    fontSize: 20,
+    color: "white",
   },
   icon: {
     width: 24,
@@ -41,9 +42,9 @@ const styles = StyleSheet.create({
   },
   contentWelcome: {
     flex: 20,
-    alignItems: 'center',
+    alignItems: "center",
     paddingTop: 35,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   optionHome: {
     flex: 40,
@@ -53,45 +54,45 @@ const styles = StyleSheet.create({
   },
   descHome: {
     flex: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   textDesc: {
     fontSize: 14,
-    color: 'white',
+    color: "white",
     marginBottom: 20,
   },
   textName: {
     fontSize: 16,
-    color: 'white',
-    fontWeight: '500',
-    textTransform: 'uppercase',
+    color: "white",
+    fontWeight: "500",
+    textTransform: "uppercase",
     marginBottom: 20,
   },
   button: {
-    alignItems: 'center',
-    backgroundColor: 'transparent',
+    alignItems: "center",
+    backgroundColor: "transparent",
     padding: 15,
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: 'white',
+    borderColor: "white",
     marginHorizontal: 30,
     marginVertical: 10,
-    flexDirection: 'row',
-    alignContent: 'center',
+    flexDirection: "row",
+    alignContent: "center",
   },
   textButton: {
     fontSize: 14,
-    fontWeight: '500',
-    color: 'white',
+    fontWeight: "500",
+    color: "white",
     flex: 1,
-    position: 'absolute',
-    left: '48%',
+    position: "absolute",
+    left: "48%",
   },
-  colorCheckOut: {
-    color: '#0DD795',
+  textRegister: {
+    color: "#0DD795",
+    textDecorationLine: "underline",
   },
-  iconButton: {},
 });
 
 export default styles;
